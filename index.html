@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Batch 7 JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Batch 7 JavaScript</h1>
+</body>
+</html>
+<script>
+    var student={
+        name:"Varma",
+        age:46,
+        isStudent:false,
+        "college name":"JNTU",
+        address:{
+            street:"MIG 27/1 Road #6",
+            city:"Hyderbad",
+            state:"TS"
+        }
+    }
+
+    ///var person=new Object();
+    var person={};
+
+    person.school="XYZ School";
+    person["age"]=45;
+    person.hobbies=undefined
+
+    delete person.age;
+
+    if("age" in person){
+        console.log("age exist")
+    }
+    else
+    {
+        console.log("age not exist")
+    }
+
+    if(person.hobbies){
+        console.log("hobbies exist")
+    }
+    else
+    {
+        console.log("hobbies not exist")
+    }
+
+    for(var key in person){
+        console.log(person[key])
+    }
+
+    var teacher=Object.assign({},person);
+    teacher.subject="Math"
+    var principle=Object.assign(person,teacher);
+
+    var keys=Object.keys(teacher);
+
+</script>
